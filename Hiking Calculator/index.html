@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hiking Conversions</title>
+</head>
+<style>
+    /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .converter {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .input-group {
+      margin-bottom: 10px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .input-group input {
+      width: calc(100% - 20px);
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+
+<body>
+<div class="converter">
+    <h3>Hiking Conversions</h3>
+    <div class="input-group">
+        <label for="pounds">Body Weight:</label>
+        <input type="number" id="pounds" placeholder="Pounds" oninput="convertToKilograms()">
+        <input type="number" id="kilograms" placeholder="Kilograms" oninput="convertToPounds()">
+    </div>
+
+    <div class="input-group">
+        <label for="pounds">Hike Distance:</label>
+        <input type="number" id="miles" placeholder="Miles" oninput="convertToKilometers()">
+        <input type="number" id="kilometers" placeholder="Kilometers" oninput="convertToMiles()">
+    </div>
+
+    <div class="input-group">
+        <label for="pounds">Average Speed:</label>
+        <input type="number" id="minPerMile" placeholder="Enter pace in min/mile" oninput="convertValues()">
+        <input type="number" id="minPerKm" placeholder="Enter pace in min/km" oninput="convertValues()">
+       
+
+    </div>
+    <div class="input-group">
+        <label for="pounds">Average Hike Pace:</label>
+        <input type="number" id="mph" placeholder="Enter speed in mph" oninput="convertValues()">
+        <input type="number" id="kmph" placeholder="Enter speed in km/h" oninput="convertValues()">
+    
+    </div>
+    <div class="input-group">
+        <label for="pounds">Time To Compelete Hike:</label>
+        <input type="number" id="hours" placeholder="Equivalent hours" readonly>
+
+    </div>
+    <div class="input-group">
+        <label>Predicted Water Intake for Low Temperature Easy Hike:</label>
+        <input type="number" id="ouncesInput" placeholder="ounces" oninput="convertAndDisplay()">
+        <input type="text" id="litersResult" placeholder="liters"  readonly>
+    </div>
+    <div class="input-group">
+        <label>Predicted Water Intake for High Temperature Challenging Hike:</label>
+        <input type="text" id="highL" placeholder="Ounces" readonly>
+        <input type="text" id="highO" placeholder="Liters" readonly>
+    </div>
+</div>
+   
+
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
